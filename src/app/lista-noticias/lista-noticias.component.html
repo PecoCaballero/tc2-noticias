@@ -1,0 +1,7 @@
+<div class="container">
+  <h1 class="title">{{ categoria.nome }}</h1>
+  <div *ngFor="let noticia of noticias">
+    <app-noticia [id]="noticia.id" [deletar]="deletar"></app-noticia>
+    <div class="divider"></div>
+  </div>
+</div>

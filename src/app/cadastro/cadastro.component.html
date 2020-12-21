@@ -1,0 +1,36 @@
+<div class="container">
+  <div *ngIf="feedback.show" class="{{feedback.class}}">{{ feedback.message }}</div>
+  <h1 class="title">{{ titulo }}</h1>
+  <form [formGroup]="formCadastro" (submit)="onSubmit()">
+    <div class="form-group">
+      <label for="categoria"> Categoria</label>
+      <select class="form-control" formControlName="categoria">
+        <option *ngFor="let categoria of categorias" value="{{ categoria.id }}">
+          {{ categoria.nome }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="titulo"> Título da notícia</label>
+      <input class="form-control" type="text" formControlName="titulo" />
+    </div>
+
+    <div class="form-group">
+      <label for="subtitulo"> Subtítulo da notícia</label>
+      <input class="form-control" type="text" formControlName="subtitulo" />
+    </div>
+
+    <div class="form-group">
+      <label for="conteudo"> Conteúdo da notícia</label>
+      <textarea
+        class="form-control"
+        type="text"
+        formControlName="conteudo"
+        rows="6"
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">{{ textoBotao }}</button>
+  </form>
+</div>

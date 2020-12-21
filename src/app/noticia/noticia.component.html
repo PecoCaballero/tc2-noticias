@@ -1,0 +1,12 @@
+<div class="container-noticia">
+  <div>
+    <h3>{{noticia.titulo}}</h3>
+    <h4>{{noticia.subtitulo}}</h4>
+    <p>{{noticia.conteudo}}</p>
+  </div>
+  <div *ngIf="editavel" class="button-container">
+    <button class="btn btn-primary" routerLink="/editar/{{noticia.id}}">Editar</button>
+    <button class="btn btn-danger" (click)="deletar(noticia)">Deletar</button>
+  </div>
+  <p class="date">{{noticia.data}}</p>
+</div>

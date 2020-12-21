@@ -1,0 +1,15 @@
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.date {
+    color: #c2bfbf;
+    text-align: end;
+    margin: 0
+}
+
+.container-noticia {
+    padding: 1rem 0;
+}

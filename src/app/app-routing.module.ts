@@ -1,7 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { ListaNoticiasComponent } from './lista-noticias/lista-noticias.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'cadastrar', component: CadastroComponent },
+  { path: 'editar/:id', component: CadastroComponent },
+  // { path: '', component: DashboardComponent },
+  { path: 'noticias/:categoria', component: ListaNoticiasComponent },
+  // { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
